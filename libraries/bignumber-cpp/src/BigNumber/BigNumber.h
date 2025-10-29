@@ -1,5 +1,5 @@
 //
-//  BigNumber.h
+//  PrintableBigNumber.h
 //
 //  Author:  Nick Gammon
 //  Date:    22nd January 2013.
@@ -12,7 +12,6 @@
 #define _BigNumber_h
 
 #include <stddef.h>
-#include <Arduino.h>
 #include <stdint.h>
 
 extern "C" 
@@ -20,7 +19,7 @@ extern "C"
  #include "number.h" 
 }
 
-class BigNumber : public Printable
+class BigNumber
 {
   
   // the current scaling amount - shared amongst all BigNumbers
@@ -49,7 +48,6 @@ public:
   // for outputting purposes ...
   char * toString () const;  // returns number as string, MUST FREE IT after use!
   operator long () const;
-  virtual size_t printTo(Print& p) const; // for Arduino Serial.print()
 
   // operators ... assignment
   BigNumber & operator= (const BigNumber & rhs);

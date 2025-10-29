@@ -1,5 +1,5 @@
 //
-//  BigNumber.h
+//  PrintableBigNumber.h
 //  
 //  Author:  Nick Gammon
 //  Date:    7th January 2018.
